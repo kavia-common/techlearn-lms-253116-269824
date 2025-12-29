@@ -1,4 +1,8 @@
-{
-    "command": "PORT=<port> HOST=<host> BROWSER=none npm start",
-    "working_directory": "/home/kavia/workspace/code-generation/techlearn-lms-253116/lms_frontend"
-}
+# init-run-tool config for frontend container
+# This file instructs the runtime which directory and command to use.
+WORKDIR=lms_frontend
+# Use CI=true to avoid interactive prompts and ensure non-interactive behavior
+START_CMD="CI=true npm start"
+# Build/test commands can be set similarly if the runner supports them:
+# BUILD_CMD="CI=true npm run build"
+# TEST_CMD="CI=true npm test -- --watchAll=false"
